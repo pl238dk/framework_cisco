@@ -1,0 +1,8 @@
+{
+	"servers":	{
+		"hello":	{
+			"client_id":	"",
+			"client_secret":	""
+		}
+	}
+}
