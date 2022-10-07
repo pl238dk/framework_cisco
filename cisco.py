@@ -2,7 +2,6 @@ import requests
 requests.packages.urllib3.disable_warnings()
 import json
 import os
-from timestamp.timestamp import timestamp
 
 class Cisco(object):
 	def __init__(self, config=None):
@@ -105,7 +104,6 @@ class Cisco(object):
 		output = self.get_request(path)
 		return output
 	
-	@timestamp
 	def get_eox_date_range(self, date_start, date_end, page=1, attribute='EO_LAST_SUPPORT_DATE', encoding='json'):
 		page_index = page
 		p = {
@@ -159,7 +157,6 @@ class Cisco(object):
 		_pickle.dump(data, open(filename,'wb'))
 		return
 	
-	@timestamp
 	def json_to_dict(self, data):
 		output = []
 		for record in data:
